@@ -1,0 +1,14 @@
+{
+  "_output_dir": "/Users/harihiom/Anil/Development",
+  "_template": "gh:cjolowicz/cookiecutter-hypermodern-python",
+  "author": "Anil Kulkarni",
+  "copyright_year": "2023",
+  "development_status": "Development Status :: 1 - Planning",
+  "email": "anil77k@gmail.com",
+  "friendly_name": "PyDataUtils",
+  "github_user": "anilkulkarni87",
+  "license": "MIT",
+  "package_name": "pydatautils",
+  "project_name": "pydatautils",
+  "version": "0.0.0"
+}
