@@ -3,6 +3,6 @@
 ## pydatautils
 
 ```{eval-rst}
-.. automodule:: pydatautils
+.. automodule:: pydataassist
    :members:
 ```
