@@ -1,4 +1,6 @@
+"""This is module to support encryption."""
 import json
+from typing import Any
 
 from pyspark.sql import SparkSession
 from pyspark.sql.dataframe import DataFrame
@@ -12,12 +14,12 @@ from pyspark.sql.types import StructField
 from pyspark.sql.types import StructType
 
 
-def get_spark_schema_from_json_response(json_response: dict[str, any]) -> StructType:
-    """
-    Extract the schema from a JSON response and return it as a Spark StructType.
+def get_spark_schema_from_json_response(json_response: str) -> StructType:
+    """Extract the schema from a JSON response and return it as a Spark StructType.
 
     Args:
-        json_response (Dict[str, Any]): The JSON response from which to extract the schema.
+        json_response (Dict[str, Any]): The JSON response
+            from which to extract the schema.
 
     Returns:
         A Spark StructType representing the schema of the JSON data.
@@ -37,7 +39,8 @@ def get_spark_schema_from_json_response(json_response: dict[str, any]) -> Struct
         elif isinstance(value, bool):
             fields.append(StructField(key, BooleanType(), True))
         elif isinstance(value, list):
-            # If the value is a list, get the element type and create an ArrayType StructField
+            # If the value is a list, get the element type
+            # and create an ArrayType StructField
             element_type = get_element_type(value)
             fields.append(StructField(key, ArrayType(element_type, True), True))
         else:
@@ -51,7 +54,15 @@ def get_spark_schema_from_json_response(json_response: dict[str, any]) -> Struct
     return schema
 
 
-def get_element_type(list_obj):
+def get_element_type(list_obj: Any) -> Any:
+    """_summary_.
+
+    Args:
+        list_obj (_type_): _description_
+
+    Returns:
+        StructType: _description_
+    """
     # Get the element type of a list by recursively checking its elements
     if isinstance(list_obj[0], str):
         return StringType()
@@ -71,6 +82,14 @@ def get_element_type(list_obj):
 
 
 def get_spark_df_from_json(json_data: str) -> DataFrame:
+    """_summary_.
+
+    Args:
+        json_data (str): _description_
+
+    Returns:
+        DataFrame: _description_
+    """
     # Create a Spark session
     spark = SparkSession.builder.appName("API Data").getOrCreate()
 

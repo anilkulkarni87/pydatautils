@@ -1,11 +1,11 @@
 """This is a test Module."""
 import json
 
-from pydatautils import restassist
-from pydatautils import sparkassist
+from src.pydatautils import restassist
+from src.pydatautils import sparkassist
 
 
-def test_api_to_df():
+def test_api_to_df() -> None:
     """This is a test function."""
     df = restassist.api_to_df("https://www.boredapi.com/api/activity")
     column_list = [
@@ -20,7 +20,7 @@ def test_api_to_df():
     assert column_list.sort() == df.columns.sort()
 
 
-def test_get_spark_schema_from_json_response():
+def test_get_spark_schema_from_json_response() -> None:
     """This is a test function."""
     schema = sparkassist.get_spark_schema_from_json_response(
         json.dumps(restassist.call_api("https://jsonplaceholder.typicode.com/users/1"))
