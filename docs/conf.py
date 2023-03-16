@@ -5,6 +5,7 @@ copyright = "2023, Anil Kulkarni"
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
+    "sphinx.ext.imgconverter",
     "sphinx_click",
     "myst_parser",
 ]

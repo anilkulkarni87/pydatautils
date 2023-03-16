@@ -1,7 +1,7 @@
 # Usage
 
 ```{eval-rst}
-.. click:: pydatautils.__main__:main
-    :prog: pydatautils
+.. click:: pydataassist.__main__:main
+    :prog: pydataassist
     :nested: full
 ```
