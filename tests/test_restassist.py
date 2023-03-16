@@ -1,8 +1,8 @@
 """This is a test Module."""
 import json
 
-from pydatautils import restassist
-from pydatautils import sparkassist
+from pydataassist import restassist
+from pydataassist import sparkassist
 
 
 def test_api_to_df() -> None:
