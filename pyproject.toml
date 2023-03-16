@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pydataassist"
-version = "0.0.0"
+version = "0.1.0"
 description = "PyDataUtils"
 authors = ["Anil Kulkarni <anil77k@gmail.com>"]
 license = "MIT"
