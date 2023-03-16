@@ -1,5 +1,7 @@
+import base64
+import hashlib
+
 from Crypto.Cipher import AES
-import base64, hashlib
 
 
 def encrypt_data(data):
@@ -13,14 +15,14 @@ def encrypt_data(data):
     Returns:
         str: The encrypted data as a base64-encoded string.
     """
-    iv = b'0123456789abcdef'  # Fixed initialization vector
-    data = data.encode('utf-8')
-    key = hashlib.sha256("mysecretkey".encode()).digest()
+    iv = b"0123456789abcdef"  # Fixed initialization vector
+    data = data.encode("utf-8")
+    key = hashlib.sha256(b"mysecretkey").digest()
     cipher = AES.new(key, AES.MODE_CBC, iv)
     padding_len = AES.block_size - len(data) % AES.block_size
     data += bytes([padding_len] * padding_len)
     encrypted = cipher.encrypt(data)
-    return base64.b64encode(encrypted).decode('utf-8')
+    return base64.b64encode(encrypted).decode("utf-8")
 
 
 def decrypt_data(encrypted_data):
@@ -34,10 +36,10 @@ def decrypt_data(encrypted_data):
     Returns:
         bytes: The decrypted data as a bytes object.
     """
-    iv = b'0123456789abcdef'  # Fixed initialization vector
-    key = hashlib.sha256("mysecretkey".encode()).digest()
+    iv = b"0123456789abcdef"  # Fixed initialization vector
+    key = hashlib.sha256(b"mysecretkey").digest()
     cipher = AES.new(key, AES.MODE_CBC, iv)
-    encrypted = base64.b64decode(encrypted_data.encode('utf-8'))
+    encrypted = base64.b64decode(encrypted_data.encode("utf-8"))
     decrypted = cipher.decrypt(encrypted)
     padding_len = decrypted[-1]
     return decrypted[:-padding_len].decode("utf-8")

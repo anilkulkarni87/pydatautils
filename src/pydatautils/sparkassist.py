@@ -1,8 +1,15 @@
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DoubleType, BooleanType, ArrayType
-from pyspark.sql.dataframe import DataFrame
 import json
+
 from pyspark.sql import SparkSession
+from pyspark.sql.dataframe import DataFrame
 from pyspark.sql.functions import from_json
+from pyspark.sql.types import ArrayType
+from pyspark.sql.types import BooleanType
+from pyspark.sql.types import DoubleType
+from pyspark.sql.types import IntegerType
+from pyspark.sql.types import StringType
+from pyspark.sql.types import StructField
+from pyspark.sql.types import StructType
 
 
 def get_spark_schema_from_json_response(json_response: dict[str, any]) -> StructType:
