@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pydatautils"
+name = "pydataassist"
 version = "0.0.0"
 description = "PyDataUtils"
 authors = ["Anil Kulkarni <anil77k@gmail.com>"]

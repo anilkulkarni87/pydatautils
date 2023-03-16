@@ -1,5 +1,5 @@
 """Sphinx configuration."""
-project = "PyDataUtils"
+project = "PyDataAssist"
 author = "Anil Kulkarni"
 copyright = "2023, Anil Kulkarni"
 extensions = [

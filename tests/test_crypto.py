@@ -1,5 +1,5 @@
 """This is a test Module."""
-from pydatautils import encryption
+from pydataassist import encryption
 
 
 def test_encrypt_data() -> None:

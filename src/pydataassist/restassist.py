@@ -9,7 +9,7 @@ from pyspark.sql.dataframe import DataFrame
 from pyspark.sql.functions import from_json
 from pyspark.sql.types import StringType
 
-from pydatautils.sparkassist import get_spark_schema_from_json_response
+from pydataassist.sparkassist import get_spark_schema_from_json_response
 
 
 def call_api(

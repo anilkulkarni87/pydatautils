@@ -2,7 +2,7 @@
 import pytest
 from click.testing import CliRunner
 
-from pydatautils import __main__
+from pydataassist import __main__
 
 
 @pytest.fixture
