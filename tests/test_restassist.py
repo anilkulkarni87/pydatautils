@@ -1,13 +1,12 @@
+"""This is a test Module."""
 import json
-from unittest import mock
 
-import pytest
-import requests
-from pysnippets import restassist
-from pysnippets import sparkassist
+from pydatautils import restassist
+from pydatautils import sparkassist
 
 
 def test_api_to_df():
+    """This is a test function."""
     df = restassist.api_to_df("https://www.boredapi.com/api/activity")
     column_list = [
         "activity",
@@ -22,6 +21,7 @@ def test_api_to_df():
 
 
 def test_get_spark_schema_from_json_response():
+    """This is a test function."""
     schema = sparkassist.get_spark_schema_from_json_response(
         json.dumps(restassist.call_api("https://jsonplaceholder.typicode.com/users/1"))
     )
