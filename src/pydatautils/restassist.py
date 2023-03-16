@@ -32,7 +32,7 @@ def call_api(
         ValueError: _description_
 
     Returns:
-        str: _description_
+        Any: _description_
     """
     # Make a request to the API
     response = requests.request(method, api_url, headers=headers, data=data)

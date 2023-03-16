@@ -18,7 +18,7 @@ def get_spark_schema_from_json_response(json_response: str) -> StructType:
     """Extract the schema from a JSON response and return it as a Spark StructType.
 
     Args:
-        json_response (Dict[str, Any]): The JSON response
+        json_response (str): The JSON response
             from which to extract the schema.
 
     Returns:
@@ -58,10 +58,10 @@ def get_element_type(list_obj: Any) -> Any:
     """_summary_.
 
     Args:
-        list_obj (_type_): _description_
+        list_obj (Any): _description_
 
     Returns:
-        StructType: _description_
+        Any: _description_
     """
     # Get the element type of a list by recursively checking its elements
     if isinstance(list_obj[0], str):
