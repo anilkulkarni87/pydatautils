@@ -1,9 +1,9 @@
 # PyDataUtils
 
-[![PyPI](https://img.shields.io/pypi/v/pydatautils.svg)][pypi_]
-[![Status](https://img.shields.io/pypi/status/pydatautils.svg)][status]
-[![Python Version](https://img.shields.io/pypi/pyversions/pydatautils)][python version]
-[![License](https://img.shields.io/pypi/l/pydatautils)][license]
+[![PyPI](https://img.shields.io/pypi/v/pydataassist.svg)][pypi_]
+[![Status](https://img.shields.io/pypi/status/pydataassist.svg)][status]
+[![Python Version](https://img.shields.io/pypi/pyversions/pydataassist)][python version]
+[![License](https://img.shields.io/pypi/l/pydataassist)][license]
 
 [![Read the documentation at https://pydatautils.readthedocs.io/](https://img.shields.io/readthedocs/pydatautils/latest.svg?label=Read%20the%20Docs)][read the docs]
 [![Tests](https://github.com/anilkulkarni87/pydatautils/workflows/Tests/badge.svg)][tests]
@@ -12,9 +12,9 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)][pre-commit]
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
 
-[pypi_]: https://pypi.org/project/pydatautils/
-[status]: https://pypi.org/project/pydatautils/
-[python version]: https://pypi.org/project/pydatautils
+[pypi_]: https://pypi.org/project/pydataassist/
+[status]: https://pypi.org/project/pydataassist/
+[python version]: https://pypi.org/project/pydataassist
 [read the docs]: https://pydatautils.readthedocs.io/
 [tests]: https://github.com/anilkulkarni87/pydatautils/actions?workflow=Tests
 [codecov]: https://app.codecov.io/gh/anilkulkarni87/pydatautils
